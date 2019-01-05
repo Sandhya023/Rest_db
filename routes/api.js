@@ -59,7 +59,35 @@ router.get('/:resource/:id', (req, res) => {
 			confirmation: 'fail',
 			message: err.message
 		})
+	})
+})
 
+// POST - create new entities:
+router.post('/:resource', (req, res) => {
+	const resource = req.params.resource
+	const controller = controllers[resource]
+
+	if (controller == null){
+		res.json({
+			confirmation: 'fail',
+			message: 'Invalid Resource'
+		})
+
+		return
+	}
+
+	controller.post(req.body)
+	.then(data => {
+		res.json({
+			confirmation: 'success',
+			data: data
+		})
+	})
+	.catch(err => {
+		res.json({
+			confirmation: 'fail',
+			message: err.message
+		})
 	})
 })
 

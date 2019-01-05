@@ -40,14 +40,14 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div>			
 
 			<h3 style="margin-top:48px">Static Assets</h3>
 			<hr />
 			<p>
 				Static assets (images, js, css, etc) are located in the "public" directory. The image below is rendered from the 'images' directory of the public folder:
 				<br /><br />
-				<img style="background:#f9f9f9;padding:6px" src="/images/turbo.png" />
+				<img src="/images/turbo.png" />
 				<br /><br />
 				When deployed on Turbo Vertex, static assets are <em>automatically</em> distributed to a global CDN so there is no need to set that up. If you decide to eject and deploy this project on your own architecture, you will have to configure a CDN distribution (or at least you should).
 			</p>
@@ -78,7 +78,7 @@
   <script type="text/javascript" src="/js/jquery.js"></script>
 
   <!-- For file uploading. Remove if file upload not necessry -->
-  <script type="text/javascript" src="/js/dropzone.js"></script>
+  <script type="text/javascript" src="/js/dropzone.js"></script> 
 
   <!-- Turbo CDN. Better to use CDN than to store locally. -->
   <script type="text/javascript" src="https://cdn.turbo360-dev.com/dist/turbo.min.js"></script>
